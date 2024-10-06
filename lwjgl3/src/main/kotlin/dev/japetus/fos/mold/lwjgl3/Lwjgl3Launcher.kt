@@ -4,7 +4,7 @@ package dev.japetus.fos.mold.lwjgl3
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
-import dev.japetus.fos.mold.Main
+import dev.japetus.fos.mold.adapters.Main
 
 /** Launches the desktop (LWJGL3) application. */
 fun main() {
