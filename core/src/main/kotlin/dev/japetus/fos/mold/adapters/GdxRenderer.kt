@@ -8,11 +8,11 @@ import dev.japetus.fos.mold.core.Renderer
 class GdxRenderer: Renderer {
     private val batch by lazy { SpriteBatch() }
 
-    override fun render(batchProcess: (renderer: Renderer) -> Unit) {
+    override fun render(batchProcess: Renderer.() -> Unit) {
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f)
 
         batch.begin()
-        batchProcess(this)
+        this.batchProcess()
         batch.end()
     }
 
