@@ -1,9 +1,7 @@
 package dev.japetus.fos.mold.core
 
-import com.badlogic.gdx.graphics.Texture
-
-class MainWorld(private val renderer: Renderer) {
-    private val image by lazy { Texture("libgdx.png") }
+class MainWorld(private val renderer: Renderer, private val repository: Repository) {
+    private val image by lazy { repository.loadImage("libgdx.png") }
 
     fun create() {
     }

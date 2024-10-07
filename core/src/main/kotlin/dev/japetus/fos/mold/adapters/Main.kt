@@ -5,7 +5,7 @@ import dev.japetus.fos.mold.core.MainWorld
 
 /** [com.badlogic.gdx.ApplicationListener] implementation shared by all platforms. */
 class Main : ApplicationAdapter() {
-    private val mainWorld = MainWorld(GdxRenderer())
+    private val mainWorld = MainWorld(renderer = GdxRenderer(), repository = GdxRepository())
 
     override fun render() {
         mainWorld.update()

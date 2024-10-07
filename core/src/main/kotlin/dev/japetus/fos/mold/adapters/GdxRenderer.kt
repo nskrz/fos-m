@@ -1,8 +1,8 @@
 package dev.japetus.fos.mold.adapters
 
-import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.utils.ScreenUtils
+import dev.japetus.fos.mold.core.Image
 import dev.japetus.fos.mold.core.Renderer
 
 class GdxRenderer: Renderer {
@@ -16,8 +16,10 @@ class GdxRenderer: Renderer {
         batch.end()
     }
 
-    override fun draw(image: Texture, x: Float, y: Float) {
-        batch.draw(image, x, y)
+    override fun draw(image: Image, x: Float, y: Float) {
+        if (image is GdxImage) {
+            batch.draw(image.texture, x, y)
+        }
     }
 
     override fun dispose() {
