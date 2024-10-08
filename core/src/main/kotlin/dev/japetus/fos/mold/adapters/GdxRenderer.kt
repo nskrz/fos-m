@@ -16,9 +16,9 @@ class GdxRenderer: Renderer {
         batch.end()
     }
 
-    override fun draw(image: Image, x: Float, y: Float) {
+    override fun <T : Number, U : Number> draw(image: Image, x: T, y: U) {
         if (image is GdxImage) {
-            batch.draw(image.texture, x, y)
+            batch.draw(image.texture, x.toFloat(), y.toFloat())
         }
     }
 

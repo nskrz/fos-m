@@ -2,6 +2,6 @@ package dev.japetus.fos.mold.core
 
 interface Renderer {
     fun render(batchProcess: Renderer.() -> Unit)
-    fun draw(image: Image, x: Float, y: Float)
+    fun <T: Number, U: Number> draw(image: Image, x: T, y: U)
     fun dispose()
 }

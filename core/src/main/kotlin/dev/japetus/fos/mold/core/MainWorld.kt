@@ -11,7 +11,7 @@ class MainWorld(private val renderer: Renderer, private val repository: Reposito
 
     fun render() {
         renderer.render {
-            draw(image, 140f, 210f)
+            draw(image, 140, 210)
         }
     }
 
