@@ -4,6 +4,7 @@ class MainWorld(private val renderer: Renderer, private val repository: Reposito
     private val image by lazy { repository.loadImage("libgdx.png") }
 
     fun create() {
+        renderer.create()
     }
 
     fun update() {
@@ -11,11 +12,12 @@ class MainWorld(private val renderer: Renderer, private val repository: Reposito
 
     fun render() {
         renderer.render {
-            draw(image, 140, 210)
+            draw(image, 0, 0)
         }
     }
 
     fun dispose() {
         image.dispose()
+        renderer.dispose()
     }
 }
