@@ -1,3 +1,18 @@
+## General
+*.bmp
+*.png
+*.jpg
+*.jpeg
+*.ogg
+*.mp3
+*.wav
+*.zip
+*.jar
+*.7z
+*.tar.gz
+*.ico
+*.icns
+
 ## Gradle:
 .gradle/
 gradle-app.setting
